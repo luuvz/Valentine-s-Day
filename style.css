@@ -1,0 +1,92 @@
+/* PAGE 1 */
+.page1 {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff4e8a, #ff99c8);
+    font-family: Arial, sans-serif;
+}
+
+.love-button {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: #ff4e8a;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,255,255,0.7);
+    animation: pulse 1.5s infinite;
+    transition: 0.3s;
+}
+
+.love-button:hover {
+    transform: scale(1.1);
+}
+
+/* PAGE 2 */
+.page2 {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #ff4e8a, #ff99c8);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: rgba(255,255,255,0.1);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+
+.text {
+    color: white;
+    max-width: 400px;
+}
+
+.text h1 {
+    font-size: 2.5rem;
+}
+
+.photo img {
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Coeurs */
+.heart {
+    position: absolute;
+    font-size: 24px;
+    animation: fall 6s linear infinite;
+    color: white;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10vh); opacity: 1; }
+    100% { transform: translateY(110vh); opacity: 0; }
+}
